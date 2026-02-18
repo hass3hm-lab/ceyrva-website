@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Shield, Cloud, FileText, AlertTriangle, Linkedin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
+import SecurityBadge from "@/components/SecurityBadge";
+import { submitConsultationForm, validateConsultationForm } from "@/lib/formHandler";
 
 /**
  * Ceyrva Homepage - Modern Minimalist Design
@@ -16,6 +18,17 @@ import { useState } from "react";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    company: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -273,44 +286,142 @@ export default function Home() {
             Complete the form below and a member of Ceyrva will respond within one business day. All inquiries are handled confidentially.
           </p>
 
-          {/* Google Form Embed */}
+          {/* Secure Consultation Form */}
           <div className="bg-white rounded-lg border border-border p-8 mb-8">
-            <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Full Name</label>
-                <input type="text" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your name" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Company</label>
-                <input type="text" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your company" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Email</label>
-                <input type="email" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="your@email.com" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Phone</label>
-                <input type="tel" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="(555) 123-4567" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Tell us about your organization</label>
-                <textarea rows={5} className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="What security challenges are you facing?" />
-              </div>
-
-              <Button className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-3 rounded-lg">
-                Submit Consultation Request
-              </Button>
+            {/* Security Notice */}
+            <div className="mb-8 p-4 rounded-lg bg-green-50 border border-green-200">
+              <p className="text-sm text-green-700">
+                <strong>🔒 Secure Connection:</strong> Your information is encrypted with SSL/TLS and will be protected according to our Privacy Policy.
+              </p>
             </div>
+
+            {submitMessage && (
+              <div className={`mb-6 p-4 rounded-lg ${
+                submitSuccess 
+                  ? 'bg-green-50 border border-green-200 text-green-700' 
+                  : 'bg-red-50 border border-red-200 text-red-700'
+              }`}>
+                <p className="font-semibold">{submitMessage}</p>
+              </div>
+            )}
+
+            <form onSubmit={async (e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+              setFormErrors({});
+              
+              // Validate form
+              const errors = validateConsultationForm(formData);
+              if (errors.length > 0) {
+                const errorMap: { [key: string]: string } = {};
+                errors.forEach(err => {
+                  errorMap[err.field] = err.message;
+                });
+                setFormErrors(errorMap);
+                setIsSubmitting(false);
+                return;
+              }
+              
+              // Submit form
+              const result = await submitConsultationForm(formData);
+              setSubmitSuccess(result.success);
+              setSubmitMessage(result.message);
+              
+              if (result.success) {
+                setFormData({ fullName: '', company: '', email: '', phone: '', message: '' });
+              }
+              
+              setIsSubmitting(false);
+            }} className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Full Name *</label>
+                <input 
+                  type="text" 
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
+                    formErrors.fullName ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="Your name" 
+                />
+                {formErrors.fullName && <p className="text-red-600 text-sm mt-1">{formErrors.fullName}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Company *</label>
+                <input 
+                  type="text" 
+                  value={formData.company}
+                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
+                    formErrors.company ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="Your company" 
+                />
+                {formErrors.company && <p className="text-red-600 text-sm mt-1">{formErrors.company}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Email *</label>
+                <input 
+                  type="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
+                    formErrors.email ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="your@email.com" 
+                />
+                {formErrors.email && <p className="text-red-600 text-sm mt-1">{formErrors.email}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Phone *</label>
+                <input 
+                  type="tel" 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
+                    formErrors.phone ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="(555) 123-4567" 
+                />
+                {formErrors.phone && <p className="text-red-600 text-sm mt-1">{formErrors.phone}</p>}
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Tell us about your organization *</label>
+                <textarea 
+                  rows={5} 
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
+                    formErrors.message ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="What security challenges are you facing?" 
+                />
+                {formErrors.message && <p className="text-red-600 text-sm mt-1">{formErrors.message}</p>}
+              </div>
+
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-3 rounded-lg disabled:opacity-50"
+              >
+                {isSubmitting ? 'Submitting...' : 'Submit Consultation Request'}
+              </Button>
+            </form>
           </div>
 
-          <div className="text-center">
-            <p className="text-foreground/70">
-              <strong>Email:</strong> <a href="mailto:info@ceyrva.com" className="text-accent hover:underline">info@ceyrva.com</a>
-            </p>
+          <div className="space-y-6">
+            <div className="text-center">
+              <p className="text-foreground/70">
+                <strong>Email:</strong> <a href="mailto:adam@ceyrva.com" className="text-accent hover:underline">adam@ceyrva.com</a>
+              </p>
+            </div>
+            
+            {/* Security Badges */}
+            <SecurityBadge />
           </div>
         </div>
       </section>
