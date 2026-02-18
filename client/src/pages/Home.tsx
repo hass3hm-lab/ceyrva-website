@@ -290,6 +290,203 @@ export default function Home() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
+      {/* Pricing Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-blue-50">
+        <div className="container">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Transparent Pricing</h2>
+            <p className="text-lg text-foreground/70">Choose the package that fits your organization's needs. All packages include ongoing support and guidance.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Starter Package */}
+            <div className="rounded-lg border border-border bg-white p-8 hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-bold text-primary mb-2">Security Assessment</h3>
+              <p className="text-foreground/70 text-sm mb-6">For organizations starting their security journey</p>
+              <div className="mb-6">
+                <p className="text-4xl font-bold text-primary">$2,500</p>
+                <p className="text-sm text-foreground/70">One-time engagement</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Comprehensive security risk assessment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Prioritized remediation roadmap</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Executive summary report</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">30-day follow-up consultation</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg" onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}>Get Started</Button>
+            </div>
+
+            {/* Professional Package */}
+            <div className="rounded-lg border-2 border-accent bg-white p-8 hover:shadow-lg transition-shadow relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
+              <h3 className="text-2xl font-bold text-primary mb-2">Compliance Readiness</h3>
+              <p className="text-foreground/70 text-sm mb-6">For healthcare and regulated organizations</p>
+              <div className="mb-6">
+                <p className="text-4xl font-bold text-primary">$5,000</p>
+                <p className="text-sm text-foreground/70">One-time engagement</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Everything in Security Assessment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">HIPAA/SOC 2 readiness evaluation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Policy & procedure templates</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Vendor security questionnaire support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">90-day advisory support</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg" onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}>Get Started</Button>
+            </div>
+
+            {/* Enterprise Package */}
+            <div className="rounded-lg border border-border bg-white p-8 hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-bold text-primary mb-2">Ongoing Security</h3>
+              <p className="text-foreground/70 text-sm mb-6">For continuous protection and compliance</p>
+              <div className="mb-6">
+                <p className="text-4xl font-bold text-primary">$1,500</p>
+                <p className="text-sm text-foreground/70">Per month</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Monthly security & compliance reviews</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Vulnerability scanning coordination</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Security awareness training</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Incident response planning</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Unlimited email support</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg" onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}>Get Started</Button>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-foreground/70 mb-4">Not sure which package is right for you?</p>
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary/5" onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}>Book a Free 30-Minute Consultation</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-center">How It Works</h2>
+          <p className="text-lg text-foreground/70 text-center mb-16 max-w-2xl mx-auto">A simple, transparent process designed to deliver results quickly</p>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-bold text-2xl mx-auto mb-6">1</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Initial Consultation</h3>
+              <p className="text-foreground/75">We discuss your organization, current security posture, compliance requirements, and goals.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-bold text-2xl mx-auto mb-6">2</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Assessment & Analysis</h3>
+              <p className="text-foreground/75">We conduct a thorough evaluation of your security controls, configurations, and compliance gaps.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-bold text-2xl mx-auto mb-6">3</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Report & Roadmap</h3>
+              <p className="text-foreground/75">You receive a comprehensive report with prioritized findings and a clear action plan.</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-bold text-2xl mx-auto mb-6">4</div>
+              <h3 className="text-xl font-bold text-primary mb-3">Ongoing Support</h3>
+              <p className="text-foreground/75">We provide follow-up guidance and support as you implement recommendations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-center">Frequently Asked Questions</h2>
+          <p className="text-lg text-foreground/70 text-center mb-16">Common questions about our services and approach</p>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "Do I need to be HIPAA-covered to work with Ceyrva?",
+                a: "No. While we specialize in HIPAA compliance, we work with all organizations that need to strengthen their security posture and meet compliance requirements—including healthcare, professional services, SaaS, and other industries."
+              },
+              {
+                q: "How long does a security assessment take?",
+                a: "Most assessments take 2–4 weeks depending on your organization's size and complexity. We'll provide a timeline during your initial consultation."
+              },
+              {
+                q: "What if we can't afford all the recommendations?",
+                a: "Our reports prioritize findings by risk and business impact. We help you focus on the most critical items first and build a phased implementation plan that fits your budget."
+              },
+              {
+                q: "Do you provide implementation services?",
+                a: "We focus on assessment, advisory, and guidance. We can recommend trusted vendors and contractors for implementation, or work with your internal team to support the process."
+              },
+              {
+                q: "What's included in the monthly ongoing package?",
+                a: "Monthly reviews of your security posture, vulnerability management coordination, security awareness training, incident response planning, policy updates, and unlimited email support."
+              },
+              {
+                q: "How do you handle confidentiality?",
+                a: "All assessments and findings are strictly confidential. We sign NDAs and follow industry best practices for data protection. Your security information is never shared without your explicit consent."
+              },
+              {
+                q: "Can you help us prepare for a vendor security audit?",
+                a: "Yes. We help you complete vendor security questionnaires, prepare for third-party audits, and address common compliance questions."
+              },
+              {
+                q: "Do you offer phishing simulations or security training?",
+                a: "We can coordinate phishing simulations and recommend security awareness training programs. As a solo consultant, we partner with trusted vendors for these services."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="border border-border rounded-lg p-6 hover:border-accent transition-colors">
+                <h3 className="text-lg font-bold text-primary mb-3">{faq.q}</h3>
+                <p className="text-foreground/75 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Consultation Section */}
       <section id="consultation" className="py-20 lg:py-28 bg-white">
         <div className="container max-w-2xl">
