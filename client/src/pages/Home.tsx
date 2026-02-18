@@ -41,7 +41,10 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border">
         <div className="container flex items-center justify-between py-4">
-          <div className="text-2xl font-bold text-primary">Ceyrva</div>
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/ceyrva-logo-shield.png" alt="Ceyrva Logo" className="h-8 w-8" />
+            <span className="text-xl font-bold text-primary">Ceyrva</span>
+          </a>
           <div className="flex gap-8 items-center">
             <a href="#services" className="text-sm font-medium hover:text-accent transition-colors">Services</a>
             <a href="#approach" className="text-sm font-medium hover:text-accent transition-colors">Approach</a>
@@ -440,7 +443,10 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Ceyrva</h3>
+              <div className="flex items-center gap-2 mb-2">
+                <img src="/ceyrva-logo-shield.png" alt="Ceyrva Logo" className="h-8 w-8" />
+                <h3 className="text-2xl font-bold">Ceyrva</h3>
+              </div>
               <p className="text-white/80">Cybersecurity & Risk Advisory</p>
             </div>
             <div>
