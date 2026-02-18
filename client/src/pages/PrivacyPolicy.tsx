@@ -2,13 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 /**
- * Privacy Policy Page - US Standard Compliance
- * 
- * This privacy policy complies with:
- * - California Consumer Privacy Act (CCPA)
- * - General Data Protection Regulation (GDPR)
- * - CAN-SPAM Act
- * - State privacy laws
+ * Privacy Policy Page
+ * Ceyrva - Cybersecurity & Risk Advisory
+ * Simple, US-based privacy policy
  */
 
 export default function PrivacyPolicy() {
@@ -17,11 +13,11 @@ export default function PrivacyPolicy() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border">
         <div className="container flex items-center justify-between py-4">
-          <div className="text-2xl font-bold text-primary">Ceyrva</div>
-          <a href="/" className="flex items-center gap-2 text-sm font-medium text-accent hover:text-primary transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/ceyrva-logo-shield.png" alt="Ceyrva Logo" className="h-8 w-8" />
+            <span className="text-xl font-bold text-primary">Ceyrva</span>
           </a>
+          <a href="/" className="text-sm font-medium hover:text-accent transition-colors">Back to Home</a>
         </div>
       </nav>
 
