@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1771422273312,
+      "tag": "0000_late_swarm",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1771422345699,
+      "tag": "0001_thankful_bloodstorm",
+      "breakpoints": true
+    }
+  ]
+}
