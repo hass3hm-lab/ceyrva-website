@@ -50,40 +50,49 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-white to-blue-50">
         <div className="container py-20 lg:py-32">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
-              Cybersecurity & Compliance Support for Healthcare and Growing Businesses
-            </h1>
-            
-            <p className="text-2xl font-semibold text-secondary mb-6">
-              HIPAA Security Rule support, risk assessments, and practical security programs—built for teams that need to meet requirements, reduce ransomware risk, and stay operational.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl">
+              <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4">
+                Cybersecurity & Compliance Support for Healthcare and Growing Businesses
+              </h1>
+              
+              <p className="text-2xl font-semibold text-secondary mb-6">
+                HIPAA Security Rule support, risk assessments, and practical security programs—built for teams that need to meet requirements, reduce ransomware risk, and stay operational.
+              </p>
 
-            <p className="text-lg text-foreground/70 mb-8 max-w-2xl">
-              <strong>Founder-led engagements</strong> • <strong>Clear executive reporting</strong> • <strong>Confidential handling of sensitive environments</strong>
-            </p>
+              <p className="text-lg text-foreground/70 mb-8 max-w-2xl">
+                <strong>Founder-led engagements</strong> • <strong>Clear executive reporting</strong> • <strong>Confidential handling of sensitive environments</strong>
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg w-fit"
-                onClick={() => {
-                  document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Book a 15-Minute Call
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary/5 font-semibold rounded-lg w-fit"
-                onClick={() => {
-                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Learn How It Works
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg w-fit"
+                  onClick={() => {
+                    document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Book a 15-Minute Call
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-primary text-primary hover:bg-primary/5 font-semibold rounded-lg w-fit"
+                  onClick={() => {
+                    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Learn How It Works
+                </Button>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <img 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/QpNO6SkRNbA5GZVkYN0hYt-img-1_1771453053000_na1fn_aGVyby1zZWN1cmUtbmV0d29yaw.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1FwTk82U2tSTmJBNUdaVmtZTjBoWXQtaW1nLTFfMTc3MTQ1MzA1MzAwMF9uYTFmbl9hR1Z5YnkxelpXTjFjbVV0Ym1WMGQyOXlhdy5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=P1xcoCgm-FX1f6oFW9kevhduXHlsEIf5IeSGt69jxSbdhOJtYsXdIPUJ6uV5oPvbU3qAGsQcDd1DzFODN~YXVYwMfCatlhLcJkDteBDMSr9qt4IN~L2wFHGHgnlNymFvnk9dzT3phyfYzlJF3kKXCaJ0CoMY5gtVWZju3LwK9s25dV8HRG8lkjLke-wprGut9yJByV6qq03~jUYt7yiQf6dx7eWSt~2Uo9-RqG8l4b22xVpfRbLdGy-z3egC~G6MG8pQOepAVhJ9j8fZJ~grP09BWsx2SGW1MPiyAAQeU0VpzxHGKnmqPBOi5jhRfEc1r4CYDPxTGnDYpxpry~xr8A__" 
+                alt="Secure Network Infrastructure" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -92,36 +101,44 @@ export default function Home() {
       {/* Trust Section */}
       <section className="py-20 lg:py-28 bg-white border-t border-border">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Trusted, Structured, and Audit-Friendly</h2>
-          
-          <div className="grid md:grid-cols-3 gap-12 mt-16">
-            {/* Credentials */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h3 className="text-lg font-bold text-primary mb-4">Expertise & Tools</h3>
-              <p className="text-foreground/75 mb-4">
-                <strong>Platforms:</strong> Microsoft 365 • Google Workspace • Windows/macOS • EDR/AV • Backup platforms
-              </p>
-              <p className="text-foreground/75">
-                <strong>Focus:</strong> HIPAA Security Rule • Risk analysis • Compliance documentation • Ransomware readiness
-              </p>
-            </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Trusted, Structured, and Audit-Friendly</h2>
+              
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-lg font-bold text-primary mb-4">Expertise & Tools</h3>
+                  <p className="text-foreground/75 mb-4">
+                    <strong>Platforms:</strong> Microsoft 365 • Google Workspace • Windows/macOS • EDR/AV • Backup platforms
+                  </p>
+                  <p className="text-foreground/75">
+                    <strong>Focus:</strong> HIPAA Security Rule • Risk analysis • Compliance documentation • Ransomware readiness
+                  </p>
+                </div>
 
-            {/* Industries */}
-            <div>
-              <h3 className="text-lg font-bold text-primary mb-4">Industries Served</h3>
-              <ul className="space-y-2 text-foreground/75">
-                <li>✓ Healthcare (clinics, dental, therapy, home health, billing)</li>
-                <li>✓ Professional services (law, accounting, finance, real estate)</li>
-                <li>✓ SMBs (10–250 employees, cloud-first, multi-location)</li>
-              </ul>
-            </div>
+                <div>
+                  <h3 className="text-lg font-bold text-primary mb-4">Industries Served</h3>
+                  <ul className="space-y-2 text-foreground/75">
+                    <li>✓ Healthcare (clinics, dental, therapy, home health, billing)</li>
+                    <li>✓ Professional services (law, accounting, finance, real estate)</li>
+                    <li>✓ SMBs (10–250 employees, cloud-first, multi-location)</li>
+                  </ul>
+                </div>
 
-            {/* Who I Help */}
-            <div>
-              <h3 className="text-lg font-bold text-primary mb-4">Who I Help</h3>
-              <p className="text-foreground/75 leading-relaxed">
-                If you accept sensitive data, use cloud email, have staff clicking links, or depend on uptime—you need baseline controls and documentation. I help you build it fast, prove it, and maintain it.
-              </p>
+                <div>
+                  <h3 className="text-lg font-bold text-primary mb-4">Who I Help</h3>
+                  <p className="text-foreground/75 leading-relaxed">
+                    If you accept sensitive data, use cloud email, have staff clicking links, or depend on uptime—you need baseline controls and documentation. I help you build it fast, prove it, and maintain it.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <img 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/QpNO6SkRNbA5GZVkYN0hYt-img-2_1771453065000_na1fn_dHJ1c3Qtc2VjdGlvbi1oZWFsdGhjYXJl.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1FwTk82U2tSTmJBNUdaVmtZTjBoWXQtaW1nLTJfMTc3MTQ1MzA2NTAwMF9uYTFmbl9kSEoxYzNRdGMyVmpkR2x2Ymkxb1pXRnNkR2hqWVhKbC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=hvF4R21lHenJ8FnSQknvfEastqC6lXvJDR9ulqTHLR5rwUOBq9sdxH2uowhA~jT~3TmQXp-9hj6Mltm4kaTvru4uWYjxF5WoDA22mbp71nENSspXYUnB4W9~~ERqpLGO3Hv8~KSsaClmR0v-XfbrQpsKqp5tYkBP6QaCDoFY6cHS9HaOaKn-3MvIfKXR3xrsHgOeGae4zO2et82pArduMs~2FkbZNY07gB8THuBrysHruSem-evmdB1s~niot8S3VzoR-tBdj37~R00CjalSxY-8Zn36iXvH3QKaobWJa0neW04D377g4MdEs57us6iyTBtMMdHESIj3ge8Q7cHBkA__" 
+                alt="Healthcare Security & HIPAA Compliance" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -132,6 +149,23 @@ export default function Home() {
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">What's Driving Risk (and Fines) Right Now</h2>
           <p className="text-lg text-foreground/70 mb-16 max-w-2xl">Common security and compliance challenges we solve</p>
+
+          <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            <div>
+              <img 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/QpNO6SkRNbA5GZVkYN0hYt-img-3_1771453052000_na1fn_cHJvYmxlbXMtaGVhbHRoY2FyZQ.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1FwTk82U2tSTmJBNUdaVmtZTjBoWXQtaW1nLTNfMTc3MTQ1MzA1MjAwMF9uYTFmbl9jSEp2WW14bGJYTXRhR1ZoYkhSb1kyRnlaUS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=bhewg6skkj0R3bRB5kcgBK3w~2CALGPxzVhPtOwigh2LcbPXMdwMYrjVMbVcfgW7pvqJOYIggJnCmfHbCwveOwmyQBFq1iBh9VShRCRaX2rNYbpEnITxDyJP9AWOxzC8xFykbvoUaqVy9v8lnS~e64~-sgaTa4QUdayJJqwJ8BdRBkV~GeWFnfGhDZH97jYMm-iUGJ7abZ2m1wk2rt9C7~LknFXGGHctTE3AivDK2O7-gWqzq4lWmUcvdq08fPQT7ErRKHR1~kPzOBScahbrKC1fgBMjDuGfo6oYZSEG4Q7j9ftvv-a86HqGlRbWnwChjCuAJbTXla2L52e0KA-vBA__" 
+                alt="Healthcare Security Challenges" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+            <div>
+              <img 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/QpNO6SkRNbA5GZVkYN0hYt-img-4_1771453058000_na1fn_cHJvYmxlbXMtYnVzaW5lc3M.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1FwTk82U2tSTmJBNUdaVmtZTjBoWXQtaW1nLTRfMTc3MTQ1MzA1ODAwMF9uYTFmbl9jSEp2WW14bGJYTXRZblZ6YVc1bGMzTS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=bb0h-VdJrAFcsCs8Ag6MlPK9JS2QYCB2dIUVNkaUF53mbSdcJUD74EJ3vs5PuR0h8Z4qHaHINveW3HbDMvxws7QW4p2~KQF7VP3zAaHNNuO9G2YJ2QrFzILW9gyyTy6Up62JkY3wRyjzj~mGYrls2CCcSeJgSHCPoFxg1~MigWCHEC6y7-ZK80btBI2FMQhGI4BOyPWg2CMa4rUFSOxlrwC82F0jm5IoUwWyyoGLaGNeLV3mQYqU~iPyc~-klIMJqQY1gv8NZgplgsasgQSrPuMvvEzvQpVBi2CMbv2~gwgb04ciGGJIxKpvTYYHvaQ~ypnULXdZCzRJ42NeKsksyg__" 
+                alt="Business Security Challenges" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Healthcare Problems */}
@@ -199,7 +233,15 @@ export default function Home() {
       <section id="services" className="py-20 lg:py-28 bg-white">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Services (Practical, Founder-Led)</h2>
-          <p className="text-lg text-foreground/70 mb-16 max-w-2xl">All services are designed to be delivered by a solo founder in the first 90 days, with specialized work coordinated through trusted partners.</p>
+          <p className="text-lg text-foreground/70 mb-8 max-w-2xl">All services are designed to be delivered by a solo founder in the first 90 days, with specialized work coordinated through trusted partners.</p>
+
+          <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/QpNO6SkRNbA5GZVkYN0hYt-img-5_1771453063000_na1fn_c2VydmljZXMtb3ZlcnZpZXc.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1FwTk82U2tSTmJBNUdaVmtZTjBoWXQtaW1nLTVfMTc3MTQ1MzA2MzAwMF9uYTFmbl9jMlZ5ZG1salpYTXRiM1psY25acFpYYy5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=DmyKrNEZQ6X5wR0-fFvd8kgy6WmlVY8~gxqlKYXIAJKbmqfY-YLvcplaUEdANRmDLYo1twotlB7n4i9E59pRecvCGB3OHIHr6riY4r-gjUjXuPpyMHlAsOTB2zMvF9vuIrznc6CItc-y00NZOvV-rG8MNyW1yGOCBE8PwnDSkl442bKpj6ru5jyUliK5Lk6eQ832QZLiEEwm63VOij1MtD3qpWYIfXs~6ldwjt2L2PTuPVJgRLqVvyFDC5zTYB4N90yfoaoTnFGGGvcIDgZrPxkiBXzHovyOujnK2EJVPyaD99uOPl6HAZRUNrk8uF64MLHqT1XtUPrSOgncGHV2tQ__" 
+              alt="Cybersecurity Services Dashboard" 
+              className="w-full h-auto"
+            />
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
