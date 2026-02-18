@@ -123,7 +123,7 @@ export default function Home() {
             <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
                 <img 
-                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-1_1771420967000_na1fn_Y2V5cnZhLXNlY3VyaXR5LXJpc2s.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTFfMTc3MTQyMDk2NzAwMF9uYTFmbl9ZMlY1Y25aaExYTmxZM1Z5YVhSNUxYSnBjMnMucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UxtwChZr56k5WyS23m8ZmgfcZIMwvh2YBq4QkGe9e4w5cRKtXtmSpNL64p~fKetRX0FBIsk0lxPD1ygTMKAGvuVlKrYyE92vyDVfuAvQpCShyZK9Qh8hpSOYsbkbPqW2SQWAPNvWKoNcpLXp8hQca84KGmdKYU-ekqiHISqfVrPtZRUzwrh4GjgTikbfC9qGSRhG9f9HckkAcUPsxABvwLZp4g0xQlo74uzokIGwQi72btgqFSQQmER~F8XN-uw~MWfJTohJqxi6mqT0t2ZAMHiICPO~PqxBkgFygrkpGXja15rDrcBsmS~XsrKRyddJXy0gP4GfKPfmSKaKclc5dg__"
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/00VGmFWafLtKw3gql5DSiP-img-1_1771452149000_na1fn_c2VjdXJpdHktcmlzay1hc3Nlc3NtZW50.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94LzAwVkdtRldhZkx0S3czZ3FsNURTaVAtaW1nLTFfMTc3MTQ1MjE0OTAwMF9uYTFmbl9jMlZqZFhKcGRIa3RjbWx6YXkxaGMzTmxjM050Wlc1MC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=E0cCaACoQjcxmhy24pA8ojo3zUvLB~8qlIdNV43VTNuqbxOmo7gJx9bL-9rASUV3WHsoeh0aRk33DhGSpFgZ4RkCfI~s0jA5sZxE4vwPLh25hk4Uqw7hIopQ1wFBUk29CmBlnAwTbuaiUfMZFRPeVm0SHtp3dPnK4vMFgt8zsVDwzmPn1o~mBfsp1q-AAWJJtYhzlySoHUVgfa53vYLi3SfvSVVzVtb4U~TZwaMzeFsRy3MBw--K8ZLrIkrNVwWQGzrYqwvVwkhxthz-YOiLb26lhudsrn4ab52AcAg~GF5od9TftZC1PvOcafiUz74hCF9X5Z0KRgDbz7vA491ABA__"
                   alt="Security Risk Assessments"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -134,7 +134,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-3">Security Risk Assessments</h3>
                 <p className="text-foreground/75 leading-relaxed">
-                  Comprehensive review of identity, cloud configuration, access controls, backups, and security policies — delivered with a prioritized remediation roadmap.
+                  Our expert team analyzes your entire security posture—from identity and access management to cloud configurations, backup strategies, and security policies. We deliver a comprehensive report with prioritized findings and a clear remediation roadmap tailored to your business risk tolerance and resources.
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Home() {
             <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
                 <img 
-                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-2_1771420975000_na1fn_Y2V5cnZhLWNsb3VkLWlkZW50aXR5.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTJfMTc3MTQyMDk3NTAwMF9uYTFmbl9ZMlY1Y25aaExXTnNiM1ZrTFdsa1pXNTBhWFI1LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fQzDeoxsLmnW7lIOBfqXm3FKpLNiKIbxejVH7k27~WrfDYqa42S2vvD-lxp~X-AUQs9r5WjKDD823jpj3tjQrvhEvG2TY-n80OgfbfxY2NAynrzbu7h53OGpERpZ-u~EzmIujEfJ68xfRt-y4t3dFkAqaVxxxmFGsDUyfzuVz8q7a8RHT-8x6fFFBKfGe7AIykPxEPtX5azV5K49E3tzyJMwNckSBiNAKwMydy~1Vz~AEv7zg6wLjY0TX-UJd1qzEgqOCSHawZ3EF-06Un1lBphPgm5jE1IV3zU3JGoaARf5hAWgYra7-Nqf0nHlRRx4OHtxmhg2QMvJWPASkGgxoQ__"
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/00VGmFWafLtKw3gql5DSiP-img-2_1771452146000_na1fn_Y2xvdWQtaWRlbnRpdHktc2VjdXJpdHk.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94LzAwVkdtRldhZkx0S3czZ3FsNURTaVAtaW1nLTJfMTc3MTQ1MjE0NjAwMF9uYTFmbl9ZMnh2ZFdRdGFXUmxiblJwZEhrdGMyVmpkWEpwZEhrLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=kepoN3a84EGPSfGd46pS3RsuBgXH0IhBUk1Om84AYI3RE0HVHNBqnceTaAzzlww7qwiTbkgn3QaR9A4K1v5OKD4xik89t9pJvmGYtc9Wes6St6ql7zn8FRIdyBdfOqx-nCV1KmerdMjZFBwJSDt-ELwpzB~LOW2yejES3X2UF64INDNYEL7Do0cK3Vu9nHCVlcgzXK2tKmuCcR1K-H9PWZNomtRGQ4G6SpyybfkTgBZBYcqw1n3U-p-eFMgNYeygsW41aS~rCjmLGJvSMBm3tAag5oKKJfYhvXkTOD6vKIdfzKxurt4IcdgAJhLHXeVkVdv74B6iMnnoX3iyUnCoHA__"
                   alt="Cloud & Identity Security Reviews"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -154,7 +154,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-3">Cloud & Identity Security Reviews</h3>
                 <p className="text-foreground/75 leading-relaxed">
-                  Microsoft 365 and Google Workspace security evaluations including MFA enforcement, admin roles, conditional access, and exposure risks.
+                  We evaluate your cloud infrastructure and identity systems across Microsoft 365, Google Workspace, and other platforms. Our assessment covers multi-factor authentication enforcement, administrative access controls, conditional access policies, data sharing risks, and compliance posture to ensure your cloud environment is secure and properly configured.
                 </p>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
                 <img 
-                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-3_1771420981000_na1fn_Y2V5cnZhLWNvbXBsaWFuY2U.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTNfMTc3MTQyMDk4MTAwMF9uYTFmbl9ZMlY1Y25aaExXTnZiWEJzYVdGdVkyVS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=bl5QmNy1EXrnfC~JHo591HATbfeug1ChAGt~HuHRLqTdrj2xo8DX0GPefmHRSOFTSc5aYLHDJ3niQW8GG2-CEPUDJUEmLCVgvyVwYgpbSATCbS6hUGx0arZv-~hqtnNpa-b1e59QQNXsmAb8CfTnfdbDtxiEttEbg2ApdiwGH3IRVSjVqbVPMoyeXw2M9M108U0LiBbySghLOMSDLX2a1jSpu1KDx5zum-cVIRXtn5Ag1M-A1YL6BSQViX--tUjtPFJPb5qZKsjkh2SFaZB7FeTFftzQ~XFsmaB1PWJalXuMWikAtQvfLLt~a79fN7KEHmQAEn9YYDjO0SNArSMUzA__"
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/00VGmFWafLtKw3gql5DSiP-img-3_1771452133000_na1fn_Y29tcGxpYW5jZS1hZHZpc29yeQ.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94LzAwVkdtRldhZkx0S3czZ3FsNURTaVAtaW1nLTNfMTc3MTQ1MjEzMzAwMF9uYTFmbl9ZMjl0Y0d4cFlXNWpaUzFoWkhacGMyOXllUS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=WJsx0HrZdXeEcv2hcYDxVTrfLOVZbuC5hcyN4EmKpe0AFU1V2XWvDIskVgynQTmGhxEK3LOB5dI7X7YOWLyZ4V5~ehnH4uzwPdiYFuJ34AmmG57jARd1IpAJgyAC6tYUQ7CrihTUziqDzbLhzjYx5pT9CYNBUW8N0BFOIPnxL0UvE-EqD7D8i~wGvCGvcz3r5eEFSzSG43UinNCeyrUGQVY5uAk-WVp3lmzsLI3Lkpxbge~xWYc7yKjMteGtH-BHIa1M-SZkBFiaf7hiwELut6vStRSK2wfCgyO2KCpGlQ9Ts6oQ16vhFXSqgXp-kBbi-mH41FBJctcLZ6O4iClSDA__"
                   alt="Compliance & Readiness Advisory"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -174,7 +174,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-3">Compliance & Readiness Advisory</h3>
                 <p className="text-foreground/75 leading-relaxed">
-                  Support for organizations preparing for regulatory or vendor security requirements including HIPAA, SOC 2 readiness, and industry-specific standards.
+                  Preparing for HIPAA, SOC 2, GDPR, or vendor security assessments? We help you understand regulatory requirements, identify gaps in your current controls, and build a practical roadmap to achieve compliance. Our guidance is tailored to your industry and organizational context.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
               <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
                 <img 
-                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-4_1771420972000_na1fn_Y2V5cnZhLXJhbnNvbXdhcmU.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTRfMTc3MTQyMDk3MjAwMF9uYTFmbl9ZMlY1Y25aaExYSmhibk52YlhkaGNtVS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=qiY-m0J-MKbOlgqUNtyALcyC6~b6dye9uEkNQZKmtgAR41KnqPnWTLW8eUGbNuzpMwBpVGfQ63Cn~F-5YCtpwrK9Iw2lPVUq~TAh5Ymxwlp8B~NZeBKNyUFSYVL3M~wMugF8dy-k1Z7FTbRJfoWNRoUwUhEzFBbeV0AX3bfnfFWJ8CmCoDuoyaXERV5~mqm8irc541lypn7m5DsqiL~D37B6DnBKkWRhbanZ4uN7M450GilgBP47Gxatk1H4faTMFb2PuyCKGDWKiWbW1lcVQTMMLrnQEMvjuHc2-QIvvQgJkwKChIpzsQTpSKJX4nHl6Injejvnug5DqS1-dPoo4Q__"
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/00VGmFWafLtKw3gql5DSiP-img-4_1771452147000_na1fn_cmFuc29td2FyZS1wcm90ZWN0aW9u.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94LzAwVkdtRldhZkx0S3czZ3FsNURTaVAtaW1nLTRfMTc3MTQ1MjE0NzAwMF9uYTFmbl9jbUZ1YzI5dGQyRnlaUzF3Y201MFpXTjBhVzl1LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=sx-92~0XzoJHAi~Vsi0j96JFtEzz5mxBMs4WTCInEMx1WDiLy~YD~BcbyO6Q9ir8P~leJWUf1p5OZvgg~RltB0qhnYstPqXymcxKfyBitjYw9L3Lgl~ZU0PsgMULwc5RwveFUJIGwsVViK3OsM7N22iqJPB-YgF8yF5RedCGBZrqRx8CGbNpodiH0UvAt5~XSXAmAQ-PmOt2SuEa4lVvV0lzn-wLWF2mJVJOlVZWPy4CyAYIrlgUbS6z937kUbJ~MI0MM3M5Tfx8oQVR-dfa9F-7pWiDrn-~lVon~uXO38euTqG7bVbKJ3Pwn2qQrFoO3EDrnIAYCINB5XQsUkjgZA__"
                   alt="Ransomware & Business Continuity Review"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -194,7 +194,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-primary mb-3">Ransomware & Business Continuity Review</h3>
                 <p className="text-foreground/75 leading-relaxed">
-                  Assessment of backup integrity, recovery readiness, and response gaps to reduce downtime and operational disruption.
+                  Ransomware threats are evolving rapidly. We evaluate your backup strategies, disaster recovery capabilities, incident response readiness, and business continuity plans. Our assessment identifies gaps and provides recommendations to minimize downtime and operational disruption in the event of a security incident.
                 </p>
               </div>
             </div>
