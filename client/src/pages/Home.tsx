@@ -1,25 +1,309 @@
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { ArrowRight, CheckCircle, Shield, Cloud, FileText, AlertTriangle } from "lucide-react";
+import { useState } from "react";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Ceyrva Homepage - Modern Minimalist Design
+ * 
+ * Design Philosophy:
+ * - Clean, professional layout with generous whitespace
+ * - Deep slate blue (#1a365d) for authority and trust
+ * - Vibrant teal (#0d9488) for CTAs and key elements
+ * - Asymmetric content flow with staggered sections
+ * - Smooth, subtle animations on scroll and interaction
+ * - Typography: Plus Jakarta Sans for headings, Inter for body
  */
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-border">
+        <div className="container flex items-center justify-between py-4">
+          <div className="text-2xl font-bold text-primary">Ceyrva</div>
+          <div className="flex gap-8 items-center">
+            <a href="#services" className="text-sm font-medium hover:text-accent transition-colors">Services</a>
+            <a href="#approach" className="text-sm font-medium hover:text-accent transition-colors">Approach</a>
+            <a href="#consultation" className="text-sm font-medium hover:text-accent transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-white to-blue-50">
+        <div className="container py-20 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Text Content */}
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-4">
+                <h1 className="text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                  Ceyrva
+                </h1>
+                <p className="text-2xl md:text-3xl font-semibold text-secondary">
+                  Cybersecurity & Risk Advisory
+                </p>
+              </div>
+              
+              <p className="text-lg text-foreground/80 max-w-lg leading-relaxed">
+                Practical security assessments for growing organizations. We help businesses reduce cyber risk, strengthen cloud security, and meet compliance requirements with clear, structured guidance.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-white font-semibold rounded-lg"
+                  onClick={() => {
+                    document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Request a Consultation
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-primary text-primary hover:bg-primary/5 font-semibold rounded-lg"
+                  onClick={() => {
+                    document.getElementById('approach')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Learn How It Works
+                </Button>
+              </div>
+            </div>
+
+            {/* Right: Hero Image */}
+            <div className="relative hidden lg:block">
+              <div className="aspect-square rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/P6ptKInKyJ0OYPJmI7AdgK-img-1_1771388773000_na1fn_Y2V5cnZhLWhlcm8tbWFpbg.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1A2cHRLSW5LeUowT1lQSm1JN0FkZ0staW1nLTFfMTc3MTM4ODc3MzAwMF9uYTFmbl9ZMlY1Y25aaExXaGxjbTh0YldGcGJnLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UytL1I~AYl9fvUc7KV7nMsO1ZRVGSz1H8qyMcERnkCNkic~t3eshzwmvq6QuCu3qDn7pB7ZffR56CUPNklfM~VCQw0gjH-AApSCRFYTmXLnzA~G3yIjE-FPwDPyE-FVqaAGmJ0k-jwm8rCgze86OJ5~1qj9VKmIBsiAOGxfH2eg64b8VQdcypKpML-wwVsVeunIjBQhdj4475GM~bHbWxZkYGaVPyBUEE2f0IqlY0UPXxul113j3TejbKNvctYIm-gMQz5LbLKFVrOMxnUz5Q5Id3qaNhQiMjMZs8-cLFZJuL~k1mc8Aipv-~Bsl1~KaMx878AAI21llKdqCmGArlg__"
+                  alt="Security Assessment Dashboard"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section id="services" className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">What We Do</h2>
+            <p className="text-lg text-foreground/70">Comprehensive security services designed for growing organizations</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Service 1 */}
+            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">Security Risk Assessments</h3>
+              <p className="text-foreground/75 leading-relaxed">
+                Comprehensive review of identity, cloud configuration, access controls, backups, and security policies — delivered with a prioritized remediation roadmap.
+              </p>
+            </div>
+
+            {/* Service 2 */}
+            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Cloud className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">Cloud & Identity Security Reviews</h3>
+              <p className="text-foreground/75 leading-relaxed">
+                Microsoft 365 and Google Workspace security evaluations including MFA enforcement, admin roles, conditional access, and exposure risks.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <FileText className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">Compliance & Readiness Advisory</h3>
+              <p className="text-foreground/75 leading-relaxed">
+                Support for organizations preparing for regulatory or vendor security requirements including HIPAA, SOC 2 readiness, and industry-specific standards.
+              </p>
+            </div>
+
+            {/* Service 4 */}
+            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <AlertTriangle className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">Ransomware & Business Continuity Review</h3>
+              <p className="text-foreground/75 leading-relaxed">
+                Assessment of backup integrity, recovery readiness, and response gaps to reduce downtime and operational disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-blue-50">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Who We Serve</h2>
+          <p className="text-lg text-foreground/70 mb-12 max-w-2xl">We work with organizations across industries, from healthcare to SaaS, that are serious about security</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Healthcare providers & medical practices",
+              "Professional services firms (law, accounting, finance)",
+              "Small to mid-sized businesses (10–250 employees)",
+              "SaaS & technology startups",
+              "Organizations preparing for audits",
+              "Organizations preparing for security reviews"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-6 rounded-lg bg-white border border-border hover:border-accent transition-colors">
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="text-foreground font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section id="approach" className="py-20 lg:py-28 bg-white">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Approach</h2>
+          <p className="text-lg text-foreground/70 mb-16 max-w-2xl">A structured, evidence-based methodology designed for clarity and actionability</p>
+
+          {/* Process Visualization */}
+          <div className="mb-16 hidden lg:block">
+            <img 
+              src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/P6ptKInKyJ0OYPJmI7AdgK-img-3_1771388764000_na1fn_Y2V5cnZhLWFwcHJvYWNoLXZpc3VhbA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L1A2cHRLSW5LeUowT1lQSm1JN0FkZ0staW1nLTNfMTc3MTM4ODc2NDAwMF9uYTFmbl9ZMlY1Y25aaExXRndjSEp2WVdOb0xYWnBjM1ZoYkEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=PWyjgyShlgGTE9~en7psnOLHsR-dyHMEx08cHN1P--hUfcCZE41nGy95mgvzm4hD4F9B4CVK-IsVbI~RijBruHIHFcO5vFXrqiLGitjNgiioLBfuTYTfAzLEkLD8OqAf8WOzJQBaoqU96rZgS4geKHdcIW4D7sTNaDCK1kZ235NwkhC1rxCMRTtdh9QIengRYVwhf6OMcQ-Zl4KA1badad7WiBvJVPgwmYX1x6QrKaMu2h42h~Aq0Kj-1F6OqvAaDg2oX1D6p4eB4~6ANtdfi1MH0Q6zrENgKlnQs1h8weAcI7b7XAlnKnSiof4rnojuTs~hkNbqJbWcbY7T-Hutqg__"
+              alt="Our Approach Process"
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Text Steps */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">1</div>
+              <h3 className="text-2xl font-bold text-primary">Discovery & Scoping</h3>
+              <p className="text-foreground/75">Understand your business operations, technology stack, and risk priorities.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">2</div>
+              <h3 className="text-2xl font-bold text-primary">Structured Assessment</h3>
+              <p className="text-foreground/75">Evidence-based evaluation of controls, configurations, and documentation.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">3</div>
+              <h3 className="text-2xl font-bold text-primary">Executive Report & Plan</h3>
+              <p className="text-foreground/75">Clear findings, risk ratings, and prioritized action steps tailored to your environment.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Ceyrva Section */}
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Why Ceyrva</h2>
+          <p className="text-lg text-foreground/70 mb-12 max-w-2xl">What sets us apart</p>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
+            {[
+              "Clear, business-focused reporting",
+              "Practical remediation guidance — not just findings",
+              "Confidential and structured engagements",
+              "Designed for growing organizations, not enterprise overhead",
+              "Flexible advisory model that scales with your needs"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-6 rounded-lg bg-white border border-border">
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="text-foreground font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation Section */}
+      <section id="consultation" className="py-20 lg:py-28 bg-white">
+        <div className="container max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Request a Consultation</h2>
+          <p className="text-lg text-foreground/70 mb-8">
+            Complete the form below and a member of Ceyrva will respond within one business day. All inquiries are handled confidentially.
+          </p>
+
+          {/* Google Form Embed */}
+          <div className="bg-white rounded-lg border border-border p-8 mb-8">
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Full Name</label>
+                <input type="text" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your name" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Company</label>
+                <input type="text" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Your company" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Email</label>
+                <input type="email" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="your@email.com" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Phone</label>
+                <input type="tel" className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="(555) 123-4567" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-2">Tell us about your organization</label>
+                <textarea rows={5} className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" placeholder="What security challenges are you facing?" />
+              </div>
+
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-3 rounded-lg">
+                Submit Consultation Request
+              </Button>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-foreground/70">
+              <strong>Email:</strong> <a href="mailto:info@ceyrva.com" className="text-accent hover:underline">info@ceyrva.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Ceyrva</h3>
+              <p className="text-white/80">Cybersecurity & Risk Advisory</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <a href="mailto:info@ceyrva.com" className="text-white/80 hover:text-white transition-colors">
+                info@ceyrva.com
+              </a>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
+              <a href="#" className="text-white/80 hover:text-white transition-colors block mb-2">Privacy Policy</a>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 pt-8 text-center text-white/70">
+            <p>© 2026 Ceyrva. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
