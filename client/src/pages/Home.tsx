@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Shield, Cloud, FileText, AlertTriangle, Linkedin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 import SecurityBadge from "@/components/SecurityBadge";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { submitConsultationForm, validateConsultationForm } from "@/lib/formHandler";
 
 /**
@@ -282,6 +283,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Consultation Section */}
       <section id="consultation" className="py-20 lg:py-28 bg-white">

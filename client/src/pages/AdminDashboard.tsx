@@ -163,6 +163,18 @@ export default function AdminDashboard() {
                         {formatDistanceToNow(new Date(consultation.createdAt), { addSuffix: true })}
                       </div>
                       <div className="flex gap-2">
+                        {consultation.status !== 'contacted' && (
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => {
+                              // Mark as contacted
+                              // This will be implemented with tRPC mutation
+                            }}
+                          >
+                            Mark Contacted
+                          </Button>
+                        )}
                         <Button
                           size="sm"
                           variant="outline"

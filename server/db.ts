@@ -120,3 +120,17 @@ export async function getConsultationRequests(limit: number = 50, offset: number
 
   return result;
 }
+
+export async function updateConsultationStatus(id: number, status: 'new' | 'contacted' | 'archived') {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db
+    .update(consultationRequests)
+    .set({ status })
+    .where(eq(consultationRequests.id, id));
+
+  return result;
+}
