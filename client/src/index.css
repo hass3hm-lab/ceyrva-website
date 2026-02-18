@@ -45,14 +45,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  /* Ceyrva Color Palette - Modern Minimalist with Strategic Depth */
-  --primary: #1a365d; /* Deep slate blue for authority */
+  /* Ceyrva Color Palette - Bright Sky Blue Theme */
+  --primary: #0066cc; /* Bright sky blue for authority */
   --primary-foreground: #f9fafb; /* Off-white */
-  --sidebar-primary: #1a365d;
+  --sidebar-primary: #0066cc;
   --sidebar-primary-foreground: #f9fafb;
-  --chart-1: #0d9488; /* Vibrant teal */
-  --chart-2: #0d9488;
-  --chart-3: #1a365d;
+  --chart-1: #0099ff; /* Bright sky blue accent */
+  --chart-2: #0099ff;
+  --chart-3: #0066cc;
   --chart-4: #6b7280; /* Warm stone gray */
   --chart-5: #374151;
   --radius: 0.5rem;
@@ -66,19 +66,19 @@
   --secondary-foreground: #1f2937;
   --muted: #e5e7eb; /* Light gray */
   --muted-foreground: #6b7280;
-  --accent: #0d9488; /* Vibrant teal for CTAs */
+  --accent: #0099ff; /* Bright sky blue for CTAs */
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #ffffff;
-  --ring: #0d9488;
+  --ring: #0099ff;
   --sidebar: #ffffff;
   --sidebar-foreground: #1f2937;
-  --sidebar-accent: #0d9488;
+  --sidebar-accent: #0099ff;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #e5e7eb;
-  --sidebar-ring: #0d9488;
+  --sidebar-ring: #0099ff;
 }
 
 .dark {

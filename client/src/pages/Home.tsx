@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Shield, Cloud, FileText, AlertTriangle } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, Cloud, FileText, AlertTriangle, Linkedin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { useState } from "react";
 
 /**
@@ -98,47 +98,83 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Service 1 */}
-            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Shield className="w-6 h-6 text-white" />
+            <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-1_1771420967000_na1fn_Y2V5cnZhLXNlY3VyaXR5LXJpc2s.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTFfMTc3MTQyMDk2NzAwMF9uYTFmbl9ZMlY1Y25aaExYTmxZM1Z5YVhSNUxYSnBjMnMucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UxtwChZr56k5WyS23m8ZmgfcZIMwvh2YBq4QkGe9e4w5cRKtXtmSpNL64p~fKetRX0FBIsk0lxPD1ygTMKAGvuVlKrYyE92vyDVfuAvQpCShyZK9Qh8hpSOYsbkbPqW2SQWAPNvWKoNcpLXp8hQca84KGmdKYU-ekqiHISqfVrPtZRUzwrh4GjgTikbfC9qGSRhG9f9HckkAcUPsxABvwLZp4g0xQlo74uzokIGwQi72btgqFSQQmER~F8XN-uw~MWfJTohJqxi6mqT0t2ZAMHiICPO~PqxBkgFygrkpGXja15rDrcBsmS~XsrKRyddJXy0gP4GfKPfmSKaKclc5dg__"
+                  alt="Security Risk Assessments"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Security Risk Assessments</h3>
-              <p className="text-foreground/75 leading-relaxed">
-                Comprehensive review of identity, cloud configuration, access controls, backups, and security policies — delivered with a prioritized remediation roadmap.
-              </p>
+              <div className="p-8">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">Security Risk Assessments</h3>
+                <p className="text-foreground/75 leading-relaxed">
+                  Comprehensive review of identity, cloud configuration, access controls, backups, and security policies — delivered with a prioritized remediation roadmap.
+                </p>
+              </div>
             </div>
 
             {/* Service 2 */}
-            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Cloud className="w-6 h-6 text-white" />
+            <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-2_1771420975000_na1fn_Y2V5cnZhLWNsb3VkLWlkZW50aXR5.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTJfMTc3MTQyMDk3NTAwMF9uYTFmbl9ZMlY1Y25aaExXTnNiM1ZrTFdsa1pXNTBhWFI1LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fQzDeoxsLmnW7lIOBfqXm3FKpLNiKIbxejVH7k27~WrfDYqa42S2vvD-lxp~X-AUQs9r5WjKDD823jpj3tjQrvhEvG2TY-n80OgfbfxY2NAynrzbu7h53OGpERpZ-u~EzmIujEfJ68xfRt-y4t3dFkAqaVxxxmFGsDUyfzuVz8q7a8RHT-8x6fFFBKfGe7AIykPxEPtX5azV5K49E3tzyJMwNckSBiNAKwMydy~1Vz~AEv7zg6wLjY0TX-UJd1qzEgqOCSHawZ3EF-06Un1lBphPgm5jE1IV3zU3JGoaARf5hAWgYra7-Nqf0nHlRRx4OHtxmhg2QMvJWPASkGgxoQ__"
+                  alt="Cloud & Identity Security Reviews"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Cloud & Identity Security Reviews</h3>
-              <p className="text-foreground/75 leading-relaxed">
-                Microsoft 365 and Google Workspace security evaluations including MFA enforcement, admin roles, conditional access, and exposure risks.
-              </p>
+              <div className="p-8">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Cloud className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">Cloud & Identity Security Reviews</h3>
+                <p className="text-foreground/75 leading-relaxed">
+                  Microsoft 365 and Google Workspace security evaluations including MFA enforcement, admin roles, conditional access, and exposure risks.
+                </p>
+              </div>
             </div>
 
             {/* Service 3 */}
-            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <FileText className="w-6 h-6 text-white" />
+            <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-3_1771420981000_na1fn_Y2V5cnZhLWNvbXBsaWFuY2U.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTNfMTc3MTQyMDk4MTAwMF9uYTFmbl9ZMlY1Y25aaExXTnZiWEJzYVdGdVkyVS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=bl5QmNy1EXrnfC~JHo591HATbfeug1ChAGt~HuHRLqTdrj2xo8DX0GPefmHRSOFTSc5aYLHDJ3niQW8GG2-CEPUDJUEmLCVgvyVwYgpbSATCbS6hUGx0arZv-~hqtnNpa-b1e59QQNXsmAb8CfTnfdbDtxiEttEbg2ApdiwGH3IRVSjVqbVPMoyeXw2M9M108U0LiBbySghLOMSDLX2a1jSpu1KDx5zum-cVIRXtn5Ag1M-A1YL6BSQViX--tUjtPFJPb5qZKsjkh2SFaZB7FeTFftzQ~XFsmaB1PWJalXuMWikAtQvfLLt~a79fN7KEHmQAEn9YYDjO0SNArSMUzA__"
+                  alt="Compliance & Readiness Advisory"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Compliance & Readiness Advisory</h3>
-              <p className="text-foreground/75 leading-relaxed">
-                Support for organizations preparing for regulatory or vendor security requirements including HIPAA, SOC 2 readiness, and industry-specific standards.
-              </p>
+              <div className="p-8">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">Compliance & Readiness Advisory</h3>
+                <p className="text-foreground/75 leading-relaxed">
+                  Support for organizations preparing for regulatory or vendor security requirements including HIPAA, SOC 2 readiness, and industry-specific standards.
+                </p>
+              </div>
             </div>
 
             {/* Service 4 */}
-            <div className="group p-8 rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <AlertTriangle className="w-6 h-6 text-white" />
+            <div className="group rounded-lg overflow-hidden bg-white border border-border hover:shadow-lg transition-all duration-300">
+              <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+                <img 
+                  src="https://private-us-east-1.manuscdn.com/sessionFile/p8sNjDW0k5T66X8g3MmIMe/sandbox/rf3wuSxlivmxJe2jMMq3nd-img-4_1771420972000_na1fn_Y2V5cnZhLXJhbnNvbXdhcmU.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcDhzTmpEVzBrNVQ2Nlg4ZzNNbUlNZS9zYW5kYm94L3JmM3d1U3hsaXZteEplMmpNTXEzbmQtaW1nLTRfMTc3MTQyMDk3MjAwMF9uYTFmbl9ZMlY1Y25aaExYSmhibk52YlhkaGNtVS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=qiY-m0J-MKbOlgqUNtyALcyC6~b6dye9uEkNQZKmtgAR41KnqPnWTLW8eUGbNuzpMwBpVGfQ63Cn~F-5YCtpwrK9Iw2lPVUq~TAh5Ymxwlp8B~NZeBKNyUFSYVL3M~wMugF8dy-k1Z7FTbRJfoWNRoUwUhEzFBbeV0AX3bfnfFWJ8CmCoDuoyaXERV5~mqm8irc541lypn7m5DsqiL~D37B6DnBKkWRhbanZ4uN7M450GilgBP47Gxatk1H4faTMFb2PuyCKGDWKiWbW1lcVQTMMLrnQEMvjuHc2-QIvvQgJkwKChIpzsQTpSKJX4nHl6Injejvnug5DqS1-dPoo4Q__"
+                  alt="Ransomware & Business Continuity Review"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-3">Ransomware & Business Continuity Review</h3>
-              <p className="text-foreground/75 leading-relaxed">
-                Assessment of backup integrity, recovery readiness, and response gaps to reduce downtime and operational disruption.
-              </p>
+              <div className="p-8">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <AlertTriangle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">Ransomware & Business Continuity Review</h3>
+                <p className="text-foreground/75 leading-relaxed">
+                  Assessment of backup integrity, recovery readiness, and response gaps to reduce downtime and operational disruption.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -289,8 +325,8 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
-              <a href="mailto:info@ceyrva.com" className="text-white/80 hover:text-white transition-colors">
-                info@ceyrva.com
+              <a href="mailto:adam@ceyrva.com" className="text-white/80 hover:text-white transition-colors">
+                adam@ceyrva.com
               </a>
             </div>
             <div>
@@ -299,8 +335,32 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-white/20 pt-8 text-center text-white/70">
-            <p>© 2026 Ceyrva. All rights reserved.</p>
+          <div className="border-t border-white/20 pt-8">
+            <div className="flex justify-center gap-6 mb-8">
+              {/* LinkedIn - Update URL when ready */}
+              <a href="#" title="LinkedIn" className="text-white/70 hover:text-accent transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              {/* Facebook - Update URL when ready */}
+              <a href="#" title="Facebook" className="text-white/70 hover:text-accent transition-colors">
+                <Facebook className="w-6 h-6" />
+              </a>
+              {/* Instagram - Update URL when ready */}
+              <a href="#" title="Instagram" className="text-white/70 hover:text-accent transition-colors">
+                <Instagram className="w-6 h-6" />
+              </a>
+              {/* Twitter - Update URL when ready */}
+              <a href="#" title="Twitter" className="text-white/70 hover:text-accent transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              {/* YouTube - Update URL when ready */}
+              <a href="#" title="YouTube" className="text-white/70 hover:text-accent transition-colors">
+                <Youtube className="w-6 h-6" />
+              </a>
+            </div>
+            <div className="text-center text-white/70">
+              <p>© 2026 Ceyrva. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
