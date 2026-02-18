@@ -331,7 +331,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
-              <a href="#" className="text-white/80 hover:text-white transition-colors block mb-2">Privacy Policy</a>
+              <a href="/privacy-policy" className="text-white/80 hover:text-white transition-colors block mb-2">Privacy Policy</a>
             </div>
           </div>
 
