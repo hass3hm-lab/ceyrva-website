@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { createConsultationRequest, getConsultationRequests } from "./db";
+import { sendEmail, getConsultationNotificationEmail, getClientConfirmationEmail } from "./email";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -39,12 +40,20 @@ export const appRouter = router({
             status: 'new',
           });
 
-          // TODO: Send email notification to adam@ceyrva.com
-          // TODO: Send confirmation email to user
+          // Send notification email to adam@ceyrva.com
+          const notificationEmail = getConsultationNotificationEmail(input);
+          await sendEmail(notificationEmail);
+
+          // Send confirmation email to client
+          const confirmationEmail = getClientConfirmationEmail({
+            fullName: input.fullName,
+            email: input.email,
+          });
+          await sendEmail(confirmationEmail);
 
           return {
             success: true,
-            message: 'Your consultation request has been submitted successfully.',
+            message: 'Your consultation request has been submitted successfully. You will receive a confirmation email shortly.',
           };
         } catch (error) {
           console.error('[Consultation] Submission error:', error);
