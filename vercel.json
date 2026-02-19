@@ -1,21 +1,18 @@
 {
   "buildCommand": "pnpm build",
-  "outputDirectory": "dist/public",
   "devCommand": "pnpm dev",
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "functions": {
-    "dist/index.js": {
-      "runtime": "nodejs20.x",
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": null,
+  "outputDirectory": "dist",
+  "public": false,
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ]
 }
