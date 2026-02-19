@@ -6,8 +6,8 @@
     "NODE_ENV": "production"
   },
   "functions": {
-    "server/_core/index.ts": {
-      "runtime": "nodejs18.x",
+    "dist/index.js": {
+      "runtime": "nodejs20.x",
       "memory": 1024,
       "maxDuration": 60
     }
